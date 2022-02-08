@@ -10,7 +10,7 @@ class Image extends Model
 
     // 以下を追記
     public static $rules = array(
-        'store number' => 'required',
-        'store name' => 'required',
+        'store_number' => 'required',
+        'store_name' => 'required',
     ); //
 }

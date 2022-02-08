@@ -43,14 +43,14 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="title">店番</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="store number" value="{{ old('store number') }}">
+                            <input type="text" class="form-control" name="store_number" value="{{ old('store number') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-md-2" for="title">店舗名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="store name" value="{{ old('store name ') }}">
+                            <input type="text" class="form-control" name="store_name" value="{{ old('store name ') }}">
                         </div>
                     </div>
                     <div class="form-group row">
