@@ -19,4 +19,7 @@ Route::get('/', function () {
 
 Route::get('admin/image/create', 'Admin\ImagesController@add');
 Route::post('admin/image/create', 'Admin\ImagesController@create');
-Route::get('admin/index', 'Admin\ImagesController@index');
+Route::get('admin/image/index', 'Admin\ImagesController@index');
+Route::get('image/edit', 'Admin\ImagesController@edit')->name('login');
+Route::post('image/edit', 'Admin\ImagesController@update')->name('login');
+Route::get('image/delete', 'Admin\ImagesController@delete')->name('login');
