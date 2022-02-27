@@ -35,12 +35,24 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">コメント</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="comment" rows="20{{ old('comment ') }}">
+                            <textarea class="form-control" name="comment" rows="10{{ old('comment ') }}">
                             </textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="image">画像</label>
+                        <label class="col-md-2" for="image">画像1</label>
+                        <div class="col-md-10">
+                            <input type="file" class="form-control-file" name="image">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="image">画像2</label>
+                        <div class="col-md-10">
+                            <input type="file" class="form-control-file" name="image">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="image">画像3</label>
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                         </div>

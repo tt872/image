@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class Collects extends Model
 {
     protected $guarded = array('id');
 
@@ -12,9 +12,7 @@ class Image extends Model
     public static $rules = array(
         'store_number' => 'required',
         'store_name' => 'required',
+        'comment' => 'required',
+
     ); //
-    public function histories()
-    {
-        return $this->hasMany('App\History');
-    }
 }

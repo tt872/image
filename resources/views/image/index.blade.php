@@ -35,10 +35,12 @@
                     <thead>
                         <tr>
                             <th width="10%">ID</th>
-                            <th width="20%">店番</th>
-                            <th width="20%">店舗名</th>
-                            <th width="20%">コメント</th>
-                            <th width="20%">画像</th>
+                            <th width="10%">店番</th>
+                            <th width="10%">店舗名</th>
+                            <th width="10%">コメント</th>
+                            <th width="15%">画像1</th>
+                            <th width="15%">画像2</th>
+                            <th width="15%">画像3</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,11 +55,9 @@
                             @endif
                             <td>
                                 <div>
-                                    <a href="{{ action('Admin\ImagesController@edit', ['id' => $image->id]) }}">編集</a>
+                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id]) }}">詳細</a>
                                 </div>
-                                <div>
-                                    <a href="{{ action('Admin\ImagesController@delete', ['id' => $image->id]) }}">削除</a>
-                                </div>
+
                             </td>
                         </tr>
                         @endforeach

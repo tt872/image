@@ -142,8 +142,9 @@ return [
     */
 
     'attributes' => [
-        'store number' => '店番',
-        'store name' => '店名'
+        'store_number' => '店番',
+        'store_name' => '店名',
+        'image1_path' => '画像'
     ],
 
 ];
