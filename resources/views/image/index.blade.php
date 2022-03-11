@@ -50,14 +50,37 @@
                             <td>{{ str_limit($image->store_number, 100) }}</td>
                             <td>{{ str_limit($image->store_name, 100) }}</td>
                             <td>{{ str_limit($image->comment, 250) }}</td>
-                            @if ($image->image_path)
-                            <td><img src="{{ asset('storage/image/' . $image->image_path) }}" class="myimage"></td>
+
+                            @if ($image->imageone_path)
+                            <td><img src="{{ asset('storage/image/' . $image->imageone_path) }}" class="myimage"></td>
                             @endif
                             <td>
                                 <div>
-                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id]) }}">詳細</a>
+                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id,'image_index' => 0]) }}">詳細</a>
                                 </div>
 
+                            </td>
+
+                            @if ($image->imagetwo_path)
+                            <td><img src="{{ asset('storage/image/' . $image->imagetwo_path) }}" class="myimage"></td>
+                            @endif
+                            <td>
+                                <div>
+                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id,'image_index' => 1]) }}">詳細</a>
+                                </div>
+
+                            </td>
+
+                            @if ($image->imagethree_path)
+                            <td><img src="{{ asset('storage/image/' . $image->imagethree_path) }}" class="myimage"></td>
+                            @endif
+                            <td>
+                                <div>
+                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id,'image_index' => 2]) }}">詳細</a>
+                                </div>
+                                <div>
+                                    <a href="{{ action('Admin\ImagesController@delete', ['id' => $image->id]) }}">削除</a>
+                                </div>
                             </td>
                         </tr>
                         @endforeach
