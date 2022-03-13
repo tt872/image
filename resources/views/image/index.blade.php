@@ -34,13 +34,13 @@
                 <table class="table table-dark">
                     <thead>
                         <tr>
-                            <th width="10%">ID</th>
-                            <th width="10%">店番</th>
+                            <th width="5%">ID</th>
+                            <th width="5%">店番</th>
                             <th width="10%">店舗名</th>
-                            <th width="10%">コメント</th>
-                            <th width="15%">画像1</th>
-                            <th width="15%">画像2</th>
-                            <th width="15%">画像3</th>
+                            <th width="20%">コメント</th>
+                            <th width="20%">画像1</th>
+                            <th width="20%">画像2</th>
+                            <th width="20%">画像3</th>
                         </tr>
                     </thead>
                     <tbody>

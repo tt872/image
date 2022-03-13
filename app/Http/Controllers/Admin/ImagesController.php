@@ -82,6 +82,6 @@ class ImagesController extends Controller
         $image = Collect::find($request->id);
         // 削除する
         $image->delete();
-        return redirect('image/index');
+        return redirect('admin/image/index');
     }
 }

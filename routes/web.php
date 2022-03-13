@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin/image/create', 'Admin\ImagesController@add');
-Route::post('admin/image/create', 'Admin\ImagesController@create');
-Route::get('admin/image/index', 'Admin\ImagesController@index');
-Route::get('/', 'ImagesController@index');
-Route::get('admin/image/show', 'Admin\ImagesController@show');
-Route::get('delete', 'Admin\ImagesController@delete');
+Route::get('admin/image/create', 'Admin\ImagesController@add')->middleware('auth');
+Route::post('admin/image/create', 'Admin\ImagesController@create')->middleware('auth');
+Route::get('admin/image/index', 'Admin\ImagesController@index')->middleware('auth');
+Route::get('/', 'ImagesController@index')->middleware('auth');
+Route::get('admin/image/show', 'Admin\ImagesController@show')->middleware('auth');
+Route::get('delete', 'Admin\ImagesController@delete')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
