@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +22,9 @@ Route::post('admin/image/create', 'Admin\ImagesController@create')->middleware('
 Route::get('admin/image/index', 'Admin\ImagesController@index')->middleware('auth');
 Route::get('/', 'ImagesController@index')->middleware('auth');
 Route::get('admin/image/show', 'Admin\ImagesController@show')->middleware('auth');
-Route::get('delete', 'Admin\ImagesController@delete')->middleware('auth');
+Route::get('delete', 'Admin\ImagesController@delete');
 
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');

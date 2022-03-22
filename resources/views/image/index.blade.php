@@ -34,13 +34,13 @@
                 <table class="table table-dark">
                     <thead>
                         <tr>
-                            <th width="5%">ID</th>
+                            <th width="1%">ID</th>
                             <th width="5%">店番</th>
                             <th width="10%">店舗名</th>
                             <th width="20%">コメント</th>
-                            <th width="20%">画像1</th>
-                            <th width="20%">画像2</th>
-                            <th width="20%">画像3</th>
+                            <th width="15%">画像1</th>
+                            <th width="15%">画像2</th>
+                            <th width="15%">画像3</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,22 +54,12 @@
                             @if ($image->imageone_path)
                             <td><img src="{{ asset('storage/image/' . $image->imageone_path) }}" class="myimage"></td>
                             @endif
-                            <td>
-                                <div>
-                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id,'image_index' => 0]) }}">詳細</a>
-                                </div>
 
-                            </td>
 
                             @if ($image->imagetwo_path)
                             <td><img src="{{ asset('storage/image/' . $image->imagetwo_path) }}" class="myimage"></td>
                             @endif
-                            <td>
-                                <div>
-                                    <a href="{{ action('Admin\ImagesController@show', ['id' => $image->id,'image_index' => 1]) }}">詳細</a>
-                                </div>
 
-                            </td>
 
                             @if ($image->imagethree_path)
                             <td><img src="{{ asset('storage/image/' . $image->imagethree_path) }}" class="myimage"></td>

@@ -18,7 +18,7 @@
 
     <div class="row">
         @if ($image->imagethree_path)
-        <div><img src="{{ asset('storage/image/' . $image->imagthree_path) }}" class="showimage"></div>
+        <div><img src="{{ asset('storage/image/' . $image->imagethree_path) }}" class="showimage"></div>
         @endif
     </div>
 </div>

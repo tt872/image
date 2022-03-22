@@ -61,7 +61,7 @@ class ImagesController extends Controller
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
             // 検索されたら検索結果を取得する
-            $posts = Collect::where('title', $cond_title)->get();
+            $posts = Collect::where('store_name', $cond_title)->get();
         } else {
             // それ以外はすべてのニュースを取得する
             $posts = Collect::all();
@@ -73,7 +73,7 @@ class ImagesController extends Controller
     {
         $image = Collect::find($request->id);
 
-        return view('image.showtwo', ['image' => $image, 'image_index' => $request->image_index]);
+        return view('image.showone', ['image' => $image, 'image_index' => $request->image_index]);
     }
 
     public function delete(Request $request)
