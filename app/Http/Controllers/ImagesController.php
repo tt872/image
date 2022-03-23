@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
-use App\Image;
+use App\Collect;
 
 class ImagesController extends Controller
 {
@@ -13,9 +13,9 @@ class ImagesController extends Controller
         $cond_title = $request->cond_title;
         // $cond_title が空白でない場合は、記事を検索して取得する
         if ($cond_title != '') {
-            $posts = Image::where('title', $cond_title) . orderBy('updated_at', 'desc')->get();
+            $posts = Collect::where('title', $cond_title) . orderBy('updated_at', 'desc')->get();
         } else {
-            $posts = Image::all()->sortByDesc('updated_at');
+            $posts = Collect::all()->sortByDesc('updated_at');
         }
 
         if (count($posts) > 0) {
