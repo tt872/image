@@ -54,7 +54,7 @@ class ImagesController extends Controller
         // データベースに保存する
         $collect->fill($form);
         $collect->save();
-        return redirect('admin/image/create');
+        return redirect('admin/image/index');
     }
     public function index(Request $request)
     {
