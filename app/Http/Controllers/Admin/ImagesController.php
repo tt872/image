@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Collect;
 use Carbon\Carbon;
 use App\History;
+use Storage;
 
 class ImagesController extends Controller
 {
@@ -24,22 +25,22 @@ class ImagesController extends Controller
 
 
         if (isset($form['imageone'])) {
-            $pathone = $request->file('imageone')->store('public/image');
-            $collect->imageone_path = basename($pathone);;
+            $pathone = Storage::disk('s3')->putFile('/', $form['imageone'], 'public');
+            $collect->image_onepath = Storage::disk('s3')->url($path);
         } else {
             $collect->imageone_path = null;
         }
 
         if (isset($form['imagetwo'])) {
-            $pathtwo = $request->file('imagetwo')->store('public/image');
-            $collect->imagetwo_path = basename($pathtwo);;
+            $pathtwo = Storage::disk('s3')->putFile('/', $form['imagetwo'], 'public');
+            $collect->image_twopath = Storage::disk('s3')->url($path);
         } else {
             $collect->imagetwo_path = null;
         }
 
         if (isset($form['imagethree'])) {
-            $paththree = $request->file('imagethree')->store('public/image');
-            $collect->imagethree_path = basename($paththree);;
+            $paththree = Storage::disk('s3')->putFile('/', $form['imagethree'], 'public');
+            $collect->image_threepath = Storage::disk('s3')->url($path);
         } else {
             $collect->imagethree_path = null;
         }

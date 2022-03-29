@@ -52,17 +52,17 @@
                             <td>{{ str_limit($image->comment, 250) }}</td>
 
                             @if ($image->imageone_path)
-                            <td><img src="{{ asset('storage/image/' . $image->imageone_path) }}" class="myimage"></td>
+                            <td><img src="{{ $image->image_onepath }}" class="myimage"></td>
                             @endif
 
 
                             @if ($image->imagetwo_path)
-                            <td><img src="{{ asset('storage/image/' . $image->imagetwo_path) }}" class="myimage"></td>
+                            <td><img src="{{ $image->image_twopath }}" class="myimage"></td>
                             @endif
 
 
                             @if ($image->imagethree_path)
-                            <td><img src="{{ asset('storage/image/' . $image->imagethree_path) }}" class="myimage"></td>
+                            <td><img src="{{ $image->image_threepath }}" class="myimage"></td>
                             @endif
                             <td>
                                 <div>
