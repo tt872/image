@@ -23,24 +23,26 @@ class ImagesController extends Controller
         $collect = new Collect();
         $form = $request->all();
 
+        // $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        // $news->image_path = Storage::disk('s3')->url($path);
 
         if (isset($form['imageone'])) {
-            $pathone = Storage::disk('s3')->putFile('/', $form['imageone'], 'public');
-            $collect->image_onepath = Storage::disk('s3')->url($path);
+            $path = Storage::disk('s3')->putFile('/', $form['imageone'], 'public');
+            $collect->imageone_path = Storage::disk('s3')->url($path);
         } else {
             $collect->imageone_path = null;
         }
 
         if (isset($form['imagetwo'])) {
-            $pathtwo = Storage::disk('s3')->putFile('/', $form['imagetwo'], 'public');
-            $collect->image_twopath = Storage::disk('s3')->url($path);
+            $path = Storage::disk('s3')->putFile('/', $form['imagetwo'], 'public');
+            $collect->imagetwo_path = Storage::disk('s3')->url($path);
         } else {
             $collect->imagetwo_path = null;
         }
 
         if (isset($form['imagethree'])) {
-            $paththree = Storage::disk('s3')->putFile('/', $form['imagethree'], 'public');
-            $collect->image_threepath = Storage::disk('s3')->url($path);
+            $path = Storage::disk('s3')->putFile('/', $form['imagethree'], 'public');
+            $collect->imagethree_path = Storage::disk('s3')->url($path);
         } else {
             $collect->imagethree_path = null;
         }

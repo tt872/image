@@ -52,7 +52,7 @@
                             <td>{{ str_limit($image->comment, 250) }}</td>
 
                             @if ($image->imageone_path)
-                            <td><img src="{{ $image->image_onepath }}" class="myimage"></td>
+                            <td><img src="{{ $image->imageone_path }}" class="myimage"></td>
                             @endif
 
 
