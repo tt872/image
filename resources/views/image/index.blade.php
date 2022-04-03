@@ -57,12 +57,12 @@
 
 
                             @if ($image->imagetwo_path)
-                            <td><img src="{{ $image->image_twopath }}" class="myimage"></td>
+                            <td><img src="{{ $image->imagetwo_path }}" class="myimage"></td>
                             @endif
 
 
                             @if ($image->imagethree_path)
-                            <td><img src="{{ $image->image_threepath }}" class="myimage"></td>
+                            <td><img src="{{ $image->imagethree_path }}" class="myimage"></td>
                             @endif
                             <td>
                                 <div>
